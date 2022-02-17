@@ -5,12 +5,8 @@ from os.path import exists
 from os.path import isdir
 from os import mkdir
 
-#persistent data: Use json
-#passwords.json
-#domains.json
-#types.json
-#access control matrix -> dict of dicts
-#inverses of domains/types for fast lookup 
+def funcErrorWrapper():
+    return funcError
 
 def funcError():
     print("Error: invalid command")
@@ -296,7 +292,7 @@ def canAccess():
 
 if __name__ == "__main__":
     #setup 
-    functions = defaultdict(funcError)
+    functions = defaultdict(funcErrorWrapper)
     functions['AddUser']=addUser
     functions['Authenticate']= authenticate
     functions['SetDomain']=setDomain
