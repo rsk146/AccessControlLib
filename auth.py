@@ -258,7 +258,7 @@ def addAccess():
                     json.dump(acm, gp)
 
 def inverse(value, d):
-    return [k for (k,v) in d.items() if v==value]
+    return [k for (k,v) in d.items() if value in v]
 
 def canAccess():
     #get inversion of domain-> user, type-> object and call acm 
