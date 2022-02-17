@@ -292,7 +292,7 @@ def canAccess():
                 elif op in acm[d][t]:
                     print("Success")
                     return
-        
+        print("Access Denied")
 
 if __name__ == "__main__":
     #setup 
